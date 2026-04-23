@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Book Now — Fresh Fades Barbershop</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book Your Appointment — Fresh Fades Barbershop">
+<meta property="og:description" content="Book online 24/7. Choose your location, pick your barber, select your time. Swieqi & Sliema.">
+<meta property="og:image" content="https://images.fresha.com/locations/location-profile-images/2494176/4406670/771be33e-cf4a-40ca-9497-09207a5c226b-FRESHFADESSWIEQI-MT-Malta-Swieqi-Fresha.jpg?class=venue-gallery-large&f_width=1200">
+<meta property="og:url" content="https://freshfadesmalta.com/booking.html">
+<meta property="og:site_name" content="Fresh Fades Barbershop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book Your Appointment — Fresh Fades Barbershop">
+<meta name="twitter:description" content="Book online 24/7. Choose your location, pick your barber, select your time. Swieqi & Sliema.">
+<meta name="twitter:image" content="https://images.fresha.com/locations/location-profile-images/2494176/4406670/771be33e-cf4a-40ca-9497-09207a5c226b-FRESHFADESSWIEQI-MT-Malta-Swieqi-Fresha.jpg?class=venue-gallery-large&f_width=1200">
+<meta name="theme-color" content="#BF9B4E">
+<link rel="icon" type="image/png" href="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#060606;--bg2:#0B0B0B;--bg3:#121212;--bg4:#1B1B1B;--tx:#F4EFE9;--txm:#8E8880;--txs:#555048;--gold:#BF9B4E;--gold-l:#D4B56A;--gold-d:#8A7038;--br:rgba(191,155,78,.2);--brs:rgba(191,155,78,.08);--fh:'Playfair Display',serif;--fb:'Manrope',sans-serif;--fm:'JetBrains Mono',monospace;}
+html{background:var(--bg);color:var(--tx);font-family:var(--fb);scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{overflow-x:hidden;}a{color:inherit;text-decoration:none;}img{max-width:100%;display:block;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(6,6,6,.75);backdrop-filter:blur(30px);border-bottom:1px solid var(--brs);}
+.nl img{height:32px;opacity:.9;}.nk{display:flex;gap:32px;align-items:center;}
+.nk a{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--txm);transition:color .25s;font-weight:600;}.nk a:hover,.nk a.act{color:var(--gold);}
+.nc{background:var(--gold)!important;color:var(--bg)!important;padding:10px 24px!important;font-weight:800!important;}
+.mb{display:none;background:none;border:1px solid var(--brs);color:var(--tx);width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer;font-size:1.4rem;}
+@media(max-width:960px){nav{padding:0 20px;}.nk{display:none;}.mb{display:flex;}}
+.mm{position:fixed;inset:0;z-index:999;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
+.mm.open{display:flex;}.mm a{font-family:var(--fh);font-size:1.8rem;color:var(--txm);}.mm a:hover{color:var(--gold);}
+.mc{position:absolute;top:18px;right:20px;background:none;border:1px solid var(--brs);color:var(--tx);width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;}
+
+.se{font-size:.52rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:700;}
+.st{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px;font-weight:400;line-height:1.15;}.st em{font-style:italic;color:var(--gold);}
+
+/* BOOKING */
+.bk-page{max-width:860px;margin:0 auto;padding:140px 20px 80px;}
+.bk-progress{display:flex;gap:0;margin-bottom:48px;border:1px solid var(--brs);}
+.bk-step{flex:1;padding:16px 12px;text-align:center;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--txs);font-weight:600;position:relative;background:var(--bg);transition:all .3s;}
+.bk-step.active{color:var(--gold);background:var(--bg3);}
+.bk-step.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);}
+.bk-step.done{color:var(--gold-d);background:var(--bg2);}
+.bk-step:not(:last-child){border-right:1px solid var(--brs);}
+.bk-step span{font-family:var(--fh);font-size:1rem;display:block;margin-bottom:2px;font-weight:400;letter-spacing:0;text-transform:none;}
+
+.bk-panel{display:none;}.bk-panel.active{display:block;}
+
+/* STEP 1: LOCATION */
+.loc-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.loc-cards{grid-template-columns:1fr;}}
+.loc-card{background:var(--bg2);border:1px solid var(--brs);overflow:hidden;cursor:pointer;transition:all .35s;}
+.loc-card:hover,.loc-card.sel{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.3);}
+.loc-card.sel{border-color:var(--gold);}
+.loc-card-img{height:160px;overflow:hidden;}.loc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}.loc-card:hover .loc-card-img img{transform:scale(1.05);}
+.loc-card-body{padding:20px 22px;}
+.loc-card-tag{font-size:.46rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px;}
+.loc-card-name{font-family:var(--fh);font-size:1.2rem;margin-bottom:4px;font-weight:400;}
+.loc-card-addr{font-size:.72rem;color:var(--txm);font-weight:300;}
+.loc-card-barbers{font-size:.62rem;color:var(--txs);margin-top:12px;padding-top:12px;border-top:1px solid var(--brs);}
+
+/* STEP 2: BARBER */
+.barber-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;}
+.barber-card{background:var(--bg2);border:1px solid var(--brs);padding:24px 18px;text-align:center;cursor:pointer;transition:all .35s;}
+.barber-card:hover,.barber-card.sel{border-color:var(--gold);transform:translateY(-3px);}
+.barber-av{width:70px;height:70px;border-radius:50%;margin:0 auto 14px;overflow:hidden;border:2px solid var(--brs);transition:border-color .3s;}
+.barber-card:hover .barber-av,.barber-card.sel .barber-av{border-color:var(--gold);}
+.barber-av img{width:100%;height:100%;object-fit:cover;}
+.barber-av.init{display:flex;align-items:center;justify-content:center;background:var(--bg3);font-family:var(--fh);font-size:1.2rem;color:var(--gold);}
+.barber-name{font-family:var(--fh);font-size:1rem;margin-bottom:3px;font-weight:400;}
+.barber-role{font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);font-weight:600;}
+.barber-any{background:var(--bg3);border:1px dashed var(--brs);padding:24px 18px;text-align:center;cursor:pointer;transition:all .35s;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.barber-any:hover,.barber-any.sel{border-color:var(--gold);border-style:solid;}
+.barber-any-icon{width:70px;height:70px;border-radius:50%;background:var(--bg2);border:2px solid var(--brs);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.4rem;color:var(--txm);}
+
+/* STEP 3: SERVICE */
+.svc-list{display:flex;flex-direction:column;gap:10px;}
+.svc-item{background:var(--bg2);border:1px solid var(--brs);padding:20px 22px;cursor:pointer;transition:all .3s;display:flex;justify-content:space-between;align-items:center;}
+.svc-item:hover,.svc-item.sel{border-color:var(--gold);}
+.svc-item-left{}.svc-item-name{font-family:var(--fh);font-size:1rem;margin-bottom:3px;font-weight:400;}
+.svc-item-dur{font-size:.56rem;color:var(--txs);letter-spacing:.12em;text-transform:uppercase;font-weight:600;}
+.svc-item-price{font-family:var(--fm);font-size:1rem;color:var(--gold);font-weight:500;}
+
+/* STEP 4: DATE/TIME */
+.cal-wrap{background:var(--bg2);border:1px solid var(--brs);padding:28px;}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.cal-title{font-family:var(--fh);font-size:1.1rem;font-weight:400;}
+.cal-nav{background:transparent;border:1px solid var(--brs);color:var(--txm);width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:all .2s;}
+.cal-nav:hover{border-color:var(--gold);color:var(--gold);}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px;}
+.cal-day-lbl{text-align:center;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--txs);padding:6px 0;font-weight:600;}
+.cal-cells{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.cal-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:.74rem;color:var(--txs);cursor:default;transition:all .15s;}
+.cal-cell.avail{color:var(--tx);cursor:pointer;background:var(--bg3);}.cal-cell.avail:hover{background:var(--bg4);color:var(--gold);}
+.cal-cell.sel{background:var(--gold);color:var(--bg);font-weight:700;}
+.cal-cell.past{opacity:.25;}
+.slots-wrap{margin-top:20px;}
+.slots-title{font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:700;}
+.slots-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+@media(max-width:500px){.slots-grid{grid-template-columns:repeat(3,1fr);}}
+.slot{padding:10px 6px;background:var(--bg3);border:1px solid var(--brs);color:var(--txm);font-family:var(--fm);font-size:.7rem;cursor:pointer;text-align:center;transition:all .2s;}
+.slot:hover{border-color:var(--gold);color:var(--gold);}
+.slot.sel{background:var(--gold);border-color:var(--gold);color:var(--bg);font-weight:700;}
+.slot.taken{opacity:.25;cursor:not-allowed;text-decoration:line-through;}
+
+/* NAV BUTTONS */
+.bk-nav{display:flex;justify-content:space-between;margin-top:36px;padding-top:24px;border-top:1px solid var(--brs);}
+.bk-back{background:none;border:1px solid var(--brs);color:var(--txm);padding:12px 28px;font-family:var(--fb);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:all .2s;}
+.bk-back:hover{border-color:var(--gold);color:var(--gold);}
+.bk-next{background:var(--gold);color:var(--bg);border:none;padding:12px 28px;font-family:var(--fb);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;font-weight:800;transition:all .2s;}
+.bk-next:hover{background:var(--gold-l);}
+.bk-next:disabled{opacity:.3;cursor:not-allowed;}
+
+/* SUMMARY */
+.summary{background:var(--bg2);border:1px solid var(--br);padding:28px;margin-top:24px;}
+.sum-row{display:flex;justify-content:space-between;padding:8px 0;font-size:.78rem;border-bottom:1px solid var(--brs);}
+.sum-row:last-child{border-bottom:none;}
+.sum-lbl{color:var(--txm);font-weight:300;}
+.sum-val{color:var(--tx);font-weight:500;}
+
+footer{background:var(--bg);border-top:1px solid var(--brs);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.fl img{height:26px;opacity:.6;}.fc{font-size:.58rem;color:var(--txs);letter-spacing:.1em;}
+.fs{display:flex;gap:24px;}.fs a{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--txm);font-weight:600;transition:color .25s;}.fs a:hover{color:var(--gold);}
+@media(max-width:768px){footer{padding:28px 20px;flex-direction:column;text-align:center;}}
+
+/* ═══ PAGE TRANSITION — CINEMATIC WIPE ═══ */
+#pt-overlay{position:fixed;inset:0;z-index:99999;pointer-events:all;overflow:hidden;}
+#pt-overlay.pt-out{pointer-events:none;}
+.pt-top,.pt-bot{position:absolute;left:0;right:0;height:50%;background:#060606;transition:transform .7s cubic-bezier(.77,0,.175,1);z-index:1;}
+.pt-top{top:0;transform:translateY(0);}
+.pt-bot{bottom:0;transform:translateY(0);}
+#pt-overlay.pt-out .pt-top{transform:translateY(-102%);}
+#pt-overlay.pt-out .pt-bot{transform:translateY(102%);}
+
+
+
+.pt-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;z-index:4;transition:opacity .3s .15s;}
+#pt-overlay.pt-anim .pt-logo{opacity:1;}
+#pt-overlay.pt-out .pt-logo{opacity:0;transition:opacity .25s;}
+.pt-logo img{height:36px;opacity:.9;}
+</style>
+</head>
+<body>
+<!-- PAGE TRANSITION OVERLAY -->
+<div id="pt-overlay">
+  <div class="pt-top"></div>
+  <div class="pt-bot"></div>
+  <div class="pt-logo">
+    <img src="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_486,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png" alt="Fresh Fades">
+  </div>
+</div>
+
+
+<nav>
+  <a href="/" class="nl"><img src="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_486,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png" alt="Fresh Fades"></a>
+  <div class="nk"><a href="/">Home</a><a href="diensten.html">Services</a><a href="/#team">Barbers</a><a href="/#locations">Locations</a><a href="producten.html">Shop</a><a href="about.html">About</a><a href="/#contact">Contact</a><a href="booking.html" class="nc act">Book Now</a></div>
+  <button class="mb" onclick="document.getElementById('mm').classList.add('open')">&#9776;</button>
+</nav>
+<div class="mm" id="mm"><button class="mc" onclick="this.parentElement.classList.remove('open')">&times;</button><a href="/">Home</a><a href="diensten.html">Services</a><a href="/#team">Barbers</a><a href="/#locations">Locations</a><a href="producten.html">Shop</a><a href="about.html">About</a><a href="booking.html" style="color:var(--gold);">Book Now</a></div>
+
+<div class="bk-page">
+  <div class="se">Book Now</div>
+  <div class="st">Book your <em>appointment</em></div>
+
+  <div class="bk-progress">
+    <div class="bk-step active" id="ps1"><span>01</span>Location</div>
+    <div class="bk-step" id="ps2"><span>02</span>Barber</div>
+    <div class="bk-step" id="ps3"><span>03</span>Service</div>
+    <div class="bk-step" id="ps4"><span>04</span>Date & Time</div>
+  </div>
+
+  <!-- STEP 1: LOCATION -->
+  <div class="bk-panel active" id="step1">
+    <div class="loc-cards">
+      <div class="loc-card" onclick="pickLoc('swieqi',this)">
+        <div class="loc-card-img"><img src="https://images.fresha.com/locations/location-profile-images/2494176/4406670/771be33e-cf4a-40ca-9497-09207a5c226b-FRESHFADESSWIEQI-MT-Malta-Swieqi-Fresha.jpg?class=venue-gallery-large&f_width=3840" alt="Swieqi"></div>
+        <div class="loc-card-body"><div class="loc-card-tag">Flagship</div><div class="loc-card-name">Swieqi</div><div class="loc-card-addr">132, Triq is-Swieqi, STJ05</div><div class="loc-card-barbers">Egi &bull; Abdel &bull; Dean &bull; Arvio</div></div>
+      </div>
+      <div class="loc-card" onclick="pickLoc('sliema',this)">
+        <div class="loc-card-img"><img src="https://images.fresha.com/locations/location-profile-images/2494176/5587943/4c1e9bc6-37f2-44d6-aa5b-ee395b3d4ba2-FreshFadesSliema-MT-SliemaMalta-Fresha.jpg?class=venue-gallery-small&f_width=3840" alt="Sliema"></div>
+        <div class="loc-card-body"><div class="loc-card-tag">New Location</div><div class="loc-card-name">Sliema</div><div class="loc-card-addr">6a Triq Manwel Dimech</div><div class="loc-card-barbers">Gorast &bull; Mikael &bull; Serxho &bull; Rhoshik</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: BARBER -->
+  <div class="bk-panel" id="step2">
+    <div id="barberGrid" class="barber-grid"></div>
+    <div class="bk-nav"><button class="bk-back" onclick="goStep(1)">&larr; Back</button><button class="bk-next" id="bn2" disabled onclick="goStep(3)">Continue &rarr;</button></div>
+  </div>
+
+  <!-- STEP 3: SERVICE -->
+  <div class="bk-panel" id="step3">
+    <div class="svc-list" id="svcList"></div>
+    <div class="bk-nav"><button class="bk-back" onclick="goStep(2)">&larr; Back</button><button class="bk-next" id="bn3" disabled onclick="goStep(4)">Continue &rarr;</button></div>
+  </div>
+
+  <!-- STEP 4: DATE -->
+  <div class="bk-panel" id="step4">
+    <div class="cal-wrap">
+      <div class="cal-head">
+        <button class="cal-nav" onclick="calNav(-1)">&lsaquo;</button>
+        <div class="cal-title" id="calTitle"></div>
+        <button class="cal-nav" onclick="calNav(1)">&rsaquo;</button>
+      </div>
+      <div class="cal-days" id="calDays"></div>
+      <div class="cal-cells" id="calCells"></div>
+      <div class="slots-wrap" id="slotsWrap" style="display:none;">
+        <div class="slots-title" id="slotsTitle"></div>
+        <div class="slots-grid" id="slotsGrid"></div>
+      </div>
+    </div>
+
+    <div class="summary" id="summaryWrap" style="display:none;">
+      <div class="sum-row"><span class="sum-lbl">Location</span><span class="sum-val" id="sumLoc"></span></div>
+      <div class="sum-row"><span class="sum-lbl">Barber</span><span class="sum-val" id="sumBar"></span></div>
+      <div class="sum-row"><span class="sum-lbl">Service</span><span class="sum-val" id="sumSvc"></span></div>
+      <div class="sum-row"><span class="sum-lbl">Date & Time</span><span class="sum-val" id="sumDate"></span></div>
+      <div class="sum-row"><span class="sum-lbl">Price</span><span class="sum-val" id="sumPrice" style="color:var(--gold);font-family:var(--fm);"></span></div>
+    </div>
+
+    <div class="bk-nav"><button class="bk-back" onclick="goStep(3)">&larr; Back</button><button class="bk-next" id="bn4" disabled onclick="confirmBooking()">Confirm Booking &rarr;</button></div>
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="fl"><img src="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_486,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png" alt="Fresh Fades"></a>
+  <div class="fc">&copy; 2026 Fresh Fades Barbershop. All rights reserved.</div><div class="fc">Website developed by Roel from <a href="https://novastudiowebdesign.com/" target="_blank" style="color:var(--gold);font-weight:600;transition:opacity .2s;">NOVA STUDIO</a></div>
+  <div class="fs"><a href="https://www.instagram.com/fresh_fades_malta" target="_blank">Instagram</a><a href="https://www.facebook.com/share/16g4gnpU9b/" target="_blank">Facebook</a><a href="https://www.tiktok.com/@fresh_fades_malta" target="_blank">TikTok</a></div>
+</footer>
+
+<script>
+var B={
+  swieqi:[
+    {name:'Egi',role:'Senior Barber',img:'https://cdn-partners-api.fresha.com/employee-avatars/processed/1455165/medium/b3937a47-1478-4212-95a6-81ce71e4f884-26F8C3B9-A171-4638-B517-FE3542756799.png'},
+    {name:'Abdel',role:'Professional',img:'https://cdn-partners-api.fresha.com/employee-avatars/processed/1454748/medium/29ff5202-744e-4064-8b5e-328a71fb24e7-IMG_8227.jpeg'},
+    {name:'Dean',role:'Design Specialist',img:'https://cdn-partners-api.fresha.com/employee-avatars/processed/1461135/medium/3e77dab5-981f-4c53-b1d5-10a58ea3d49e-IMG_9935.jpeg'},
+    {name:'Arvio',role:'Professional',img:'https://cdn-partners-api.fresha.com/employee-avatars/processed/1476130/medium/539caf4b-405a-4c62-95a4-0a773b371844-137D0C9B-9137-4256-9FBD-CCF61E15E027.png'}
+  ],
+  sliema:[
+    {name:'Gorast',role:'TJ Blendzz',img:'https://cdn-partners-api.fresha.com/user-account-avatars/processed/2014200/medium/af322c71-a3ea-48bf-8796-46e2fb4665a2-IMG_4771.jpeg'},
+    {name:'Mikael',role:'Professional',img:'https://cdn-partners-api.fresha.com/employee-avatars/processed/1454784/medium/82f240ea-2809-4f18-9642-272c0c418c88-IMG_3060.jpeg'},
+    {name:'Serxho',role:'Professional',img:'https://cdn-partners-api.fresha.com/user-account-avatars/processed/1954196/medium/04f14338-8984-42f6-80f4-a9f242a0463a-IMG_3729.jpeg'},
+    {name:'Rhoshik',role:'Professional',img:'https://cdn-partners-api.fresha.com/employee-avatars/processed/1516029/medium/a0629d48-1513-4376-b2bc-a90195d83e36-IMG_8154.png'}
+  ]
+};
+var SVC=[
+  {name:'Haircut & Skinfade',dur:'30 min',price:14},
+  {name:'Skinfade & Design',dur:'30 min',price:16},
+  {name:'Skinfade & Eyebrows',dur:'35 min',price:18},
+  {name:'Haircut & Beard Trim',dur:'45 min',price:20},
+  {name:'Full Service',dur:'60 min',price:25},
+  {name:'Haircut, Beard & Design',dur:'60 min',price:28},
+  {name:'Beard Trim',dur:'20 min',price:10},
+  {name:'Kids Haircut',dur:'25 min',price:10},
+  {name:'Hot Towel Shave',dur:'30 min',price:15},
+  {name:'Eyebrow Grooming',dur:'10 min',price:5}
+];
+var SLOTS=['09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30'];
+
+var sel={loc:null,locName:'',barber:null,svc:null,date:null,time:null,price:0};
+var calMonth,calYear;
+
+// Auto-select location from URL
+var urlParams=new URLSearchParams(window.location.search);
+if(urlParams.get('loc')){
+  var locParam=urlParams.get('loc');
+  setTimeout(function(){
+    var cards=document.querySelectorAll('.loc-card');
+    if(locParam==='sliema')pickLoc('sliema',cards[1]);
+    else pickLoc('swieqi',cards[0]);
+  },100);
+}
+
+function pickLoc(loc,el){
+  document.querySelectorAll('.loc-card').forEach(function(c){c.classList.remove('sel');});
+  el.classList.add('sel');
+  sel.loc=loc;sel.locName=loc==='swieqi'?'Swieqi':'Sliema';
+  setTimeout(function(){goStep(2);},300);
+}
+
+function goStep(n){
+  document.querySelectorAll('.bk-panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('step'+n).classList.add('active');
+  document.querySelectorAll('.bk-step').forEach(function(s,i){
+    s.classList.remove('active','done');
+    if(i<n-1)s.classList.add('done');
+    if(i===n-1)s.classList.add('active');
+  });
+  if(n===2)renderBarbers();
+  if(n===3)renderServices();
+  if(n===4)initCal();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderBarbers(){
+  var g=document.getElementById('barberGrid');
+  var barbers=B[sel.loc]||[];
+  var h='<div class="barber-any" onclick="pickBarber(null,this)"><div class="barber-any-icon">&#x2726;</div><div class="barber-name">Any barber</div><div class="barber-role">First Available</div></div>';
+  barbers.forEach(function(b,i){
+    var av=b.img?'<div class="barber-av"><img src="'+b.img+'" alt="'+b.name+'"></div>':'<div class="barber-av init">'+b.init+'</div>';
+    h+='<div class="barber-card" onclick="pickBarber('+i+',this)">'+av+'<div class="barber-name">'+b.name+'</div><div class="barber-role">'+b.role+'</div></div>';
+  });
+  g.innerHTML=h;
+}
+
+function pickBarber(idx,el){
+  document.querySelectorAll('.barber-card,.barber-any').forEach(function(c){c.classList.remove('sel');});
+  el.classList.add('sel');
+  sel.barber=idx;
+  document.getElementById('bn2').disabled=false;
+}
+
+function renderServices(){
+  var l=document.getElementById('svcList');
+  var h='';
+  SVC.forEach(function(s,i){
+    h+='<div class="svc-item" onclick="pickSvc('+i+',this)"><div class="svc-item-left"><div class="svc-item-name">'+s.name+'</div><div class="svc-item-dur">'+s.dur+'</div></div><div class="svc-item-price">&euro;'+s.price+'</div></div>';
+  });
+  l.innerHTML=h;
+}
+
+function pickSvc(idx,el){
+  document.querySelectorAll('.svc-item').forEach(function(c){c.classList.remove('sel');});
+  el.classList.add('sel');
+  sel.svc=idx;sel.price=SVC[idx].price;
+  document.getElementById('bn3').disabled=false;
+}
+
+function initCal(){
+  var now=new Date();calMonth=now.getMonth();calYear=now.getFullYear();
+  renderCal();
+}
+
+function calNav(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++;}if(calMonth<0){calMonth=11;calYear--;}renderCal();}
+
+function renderCal(){
+  var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var days=['Mo','Tu','We','Th','Fr','Sa','Su'];
+  document.getElementById('calTitle').textContent=months[calMonth]+' '+calYear;
+  var dh='';days.forEach(function(d){dh+='<div class="cal-day-lbl">'+d+'</div>';});
+  document.getElementById('calDays').innerHTML=dh;
+
+  var first=new Date(calYear,calMonth,1);var startDay=(first.getDay()+6)%7;
+  var daysInMonth=new Date(calYear,calMonth+1,0).getDate();
+  var today=new Date();today.setHours(0,0,0,0);
+  var ch='';
+  for(var i=0;i<startDay;i++)ch+='<div class="cal-cell"></div>';
+  for(var d=1;d<=daysInMonth;d++){
+    var dt=new Date(calYear,calMonth,d);
+    var isPast=dt<today;var isSun=dt.getDay()===0;
+    var cls='cal-cell';
+    if(isPast||isSun)cls+=' past';
+    else cls+=' avail';
+    if(sel.date&&sel.date.getTime()===dt.getTime())cls+=' sel';
+    ch+='<div class="'+cls+'" onclick="pickDate('+calYear+','+calMonth+','+d+',this)">'+d+'</div>';
+  }
+  document.getElementById('calCells').innerHTML=ch;
+}
+
+function pickDate(y,m,d,el){
+  var dt=new Date(y,m,d);var today=new Date();today.setHours(0,0,0,0);
+  if(dt<today||dt.getDay()===0)return;
+  sel.date=dt;
+  document.querySelectorAll('.cal-cell').forEach(function(c){c.classList.remove('sel');});
+  el.classList.add('sel');
+  renderSlots();
+}
+
+function renderSlots(){
+  var w=document.getElementById('slotsWrap');w.style.display='block';
+  var opts={weekday:'long',day:'numeric',month:'long'};
+  document.getElementById('slotsTitle').textContent=sel.date.toLocaleDateString('en-GB',opts);
+  var isFri=sel.date.getDay()===5;var isSat=sel.date.getDay()===6;
+  var avail=SLOTS.filter(function(s){
+    var h=parseInt(s.split(':')[0]);
+    if(isFri)return h>=8&&h<20;
+    if(isSat)return h>=9&&h<19;
+    return h>=9&&h<20;
+  });
+  var h='';avail.forEach(function(t){
+    var taken=Math.random()<0.2;
+    var cls='slot'+(taken?' taken':'');
+    h+='<div class="'+cls+'" onclick="pickTime(\''+t+'\',this)">'+t+'</div>';
+  });
+  document.getElementById('slotsGrid').innerHTML=h;
+}
+
+function pickTime(t,el){
+  if(el.classList.contains('taken'))return;
+  document.querySelectorAll('.slot').forEach(function(s){s.classList.remove('sel');});
+  el.classList.add('sel');sel.time=t;
+  document.getElementById('bn4').disabled=false;
+  showSummary();
+}
+
+function showSummary(){
+  document.getElementById('summaryWrap').style.display='block';
+  document.getElementById('sumLoc').textContent='Fresh Fades '+sel.locName;
+  var barbers=B[sel.loc];
+  document.getElementById('sumBar').textContent=sel.barber===null?'Any available':barbers[sel.barber].name;
+  document.getElementById('sumSvc').textContent=SVC[sel.svc].name+' ('+SVC[sel.svc].dur+')';
+  var opts={weekday:'long',day:'numeric',month:'long',year:'numeric'};
+  document.getElementById('sumDate').textContent=sel.date.toLocaleDateString('en-GB',opts)+' at '+sel.time;
+  document.getElementById('sumPrice').textContent='\u20AC'+sel.price;
+}
+
+function confirmBooking(){
+  alert('Booking confirmed! \n\n'+sel.locName+' — '+(sel.barber===null?'Any barber':B[sel.loc][sel.barber].name)+'\n'+SVC[sel.svc].name+'\n'+sel.date.toLocaleDateString('en-GB')+' at '+sel.time+'\n\nThis is a mockup — in production this will save to Supabase and send a confirmation email via Brevo.');
+}
+</script>
+<script>
+(function(){
+  var ov=document.getElementById('pt-overlay');
+  if(!ov)return;
+  function navigateTo(url){
+    ov.classList.remove('pt-out','pt-anim');void ov.offsetWidth;
+    setTimeout(function(){ov.classList.add('pt-anim');},50);
+    setTimeout(function(){window.location.href=url;},800);
+  }
+  var _done=false;
+  function pageIn(){
+    if(_done)return;_done=true;
+    if(!window.location.hash)window.scrollTo(0,0);
+    ov.classList.remove('pt-out');ov.classList.add('pt-anim');
+    setTimeout(function(){ov.classList.add('pt-out');},600);
+  }
+  document.querySelectorAll('a[href]:not([href^="http"]):not([href^="#"]):not([href^="mailto"]):not([href^="tel"]):not([href^="https://wa"])').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var href=a.getAttribute('href');if(!href||href==='#')return;
+      var cur=location.pathname.split('/').pop()||'index.html';
+      var base=href.split('#')[0].split('?')[0];
+      if(href.indexOf('#')!==-1&&(base===cur||base==='')){
+        e.preventDefault();var t=document.querySelector('#'+href.split('#')[1]);
+        if(t)t.scrollIntoView({behavior:'smooth'});return;
+      }
+      if(base===cur||base===''){
+        e.preventDefault();
+        ov.classList.remove('pt-out','pt-anim');void ov.offsetWidth;
+        setTimeout(function(){ov.classList.add('pt-anim');},50);
+        setTimeout(function(){window.scrollTo(0,0);setTimeout(function(){ov.classList.add('pt-out');},400);},600);
+        return;
+      }
+      e.preventDefault();navigateTo(href);
+    });
+  });
+  window._ptNav=navigateTo;
+  window.addEventListener('pageshow',function(){_done=false;pageIn();});
+  if(document.readyState==='complete')pageIn();else window.addEventListener('load',pageIn);
+  setTimeout(function(){ov.classList.add('pt-anim');setTimeout(function(){ov.classList.add('pt-out');},500);},1500);
+})();
+</script>
+</body>
+</html>

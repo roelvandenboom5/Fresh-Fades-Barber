@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Our Story — Fresh Fades Barbershop Malta</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our Story — Fresh Fades Barbershop Malta">
+<meta property="og:description" content="From one chair in 2019 to Malta's best-rated barbershop. Award-winning team, two locations, one mission.">
+<meta property="og:image" content="https://images.fresha.com/locations/location-profile-images/2494176/4406670/771be33e-cf4a-40ca-9497-09207a5c226b-FRESHFADESSWIEQI-MT-Malta-Swieqi-Fresha.jpg?class=venue-gallery-large&f_width=1200">
+<meta property="og:url" content="https://freshfadesmalta.com/about.html">
+<meta property="og:site_name" content="Fresh Fades Barbershop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Story — Fresh Fades Barbershop Malta">
+<meta name="twitter:description" content="From one chair in 2019 to Malta's best-rated barbershop. Award-winning team, two locations, one mission.">
+<meta name="twitter:image" content="https://images.fresha.com/locations/location-profile-images/2494176/4406670/771be33e-cf4a-40ca-9497-09207a5c226b-FRESHFADESSWIEQI-MT-Malta-Swieqi-Fresha.jpg?class=venue-gallery-large&f_width=1200">
+<meta name="theme-color" content="#BF9B4E">
+<link rel="icon" type="image/png" href="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#060606;--bg2:#0B0B0B;--bg3:#121212;--bg4:#1B1B1B;--tx:#F4EFE9;--txm:#8E8880;--txs:#555048;--gold:#BF9B4E;--gold-l:#D4B56A;--gold-d:#8A7038;--br:rgba(191,155,78,.2);--brs:rgba(191,155,78,.08);--fh:'Playfair Display',serif;--fb:'Manrope',sans-serif;--fm:'JetBrains Mono',monospace;}
+html{background:var(--bg);color:var(--tx);font-family:var(--fb);scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{overflow-x:hidden;}a{color:inherit;text-decoration:none;}img{max-width:100%;display:block;}
+
+/* PAGE TRANSITION */
+#pt-overlay{position:fixed;inset:0;z-index:99999;pointer-events:all;overflow:hidden;}
+#pt-overlay.pt-out{pointer-events:none;}
+.pt-top,.pt-bot{position:absolute;left:0;right:0;height:50%;background:#060606;transition:transform .7s cubic-bezier(.77,0,.175,1);z-index:1;}
+.pt-top{top:0;transform:translateY(0);}
+.pt-bot{bottom:0;transform:translateY(0);}
+#pt-overlay.pt-out .pt-top{transform:translateY(-102%);}
+#pt-overlay.pt-out .pt-bot{transform:translateY(102%);}
+.pt-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;z-index:4;transition:opacity .3s .15s;}
+#pt-overlay.pt-anim .pt-logo{opacity:1;}
+#pt-overlay.pt-out .pt-logo{opacity:0;transition:opacity .25s;}
+.pt-logo img{height:36px;opacity:.9;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(6,6,6,.75);backdrop-filter:blur(30px);border-bottom:1px solid var(--brs);transition:all .4s;}
+nav.scrolled{height:56px;background:rgba(6,6,6,.95);}
+.nl img{height:32px;opacity:.9;}.nk{display:flex;gap:32px;align-items:center;}
+.nk a{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--txm);transition:color .25s;font-weight:600;}.nk a:hover,.nk a.act{color:var(--gold);}
+.nc{background:var(--gold)!important;color:var(--bg)!important;padding:10px 24px!important;font-weight:800!important;transition:all .25s!important;}.nc:hover{background:var(--gold-l)!important;}
+.mb{display:none;background:none;border:1px solid var(--brs);color:var(--tx);width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer;font-size:1.4rem;}
+@media(max-width:960px){nav{padding:0 20px;}.nk{display:none;}.mb{display:flex;}}
+.mm{position:fixed;inset:0;z-index:999;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
+.mm.open{display:flex;}.mm a{font-family:var(--fh);font-size:1.8rem;color:var(--txm);transition:color .2s;}.mm a:hover{color:var(--gold);}
+.mc{position:absolute;top:18px;right:20px;background:none;border:1px solid var(--brs);color:var(--tx);width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;}
+
+.se{font-size:.52rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:700;}
+.st{font-family:var(--fh);font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px;font-weight:400;line-height:1.15;}.st em{font-style:italic;color:var(--gold);}
+.ss{font-size:.86rem;color:var(--txm);line-height:1.8;max-width:480px;font-weight:300;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--fb);font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;}
+.btn-g{background:var(--gold);color:var(--bg);}.btn-g:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 24px rgba(191,155,78,.2);}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;}.rv.vis{opacity:1;transform:translateY(0);}
+
+/* HERO */
+.ab-hero{position:relative;height:60vh;min-height:400px;display:flex;align-items:flex-end;justify-content:center;padding:60px 20px;overflow:hidden;}
+.ab-hero-bg{position:absolute;inset:0;background:url('https://images.fresha.com/locations/location-profile-images/2494176/4406670/771be33e-cf4a-40ca-9497-09207a5c226b-FRESHFADESSWIEQI-MT-Malta-Swieqi-Fresha.jpg?class=venue-gallery-small&f_width=1200') center/cover no-repeat;filter:brightness(.3);z-index:0;}
+.ab-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,6,.3) 0%,rgba(6,6,6,.95) 100%);z-index:1;}
+.ab-hero-content{position:relative;z-index:2;text-align:center;max-width:600px;}
+
+/* CONTENT */
+section{padding:80px 20px;max-width:800px;margin:0 auto;}
+.ab-text{font-size:.88rem;color:var(--txm);line-height:1.9;margin-bottom:28px;font-weight:300;}
+.ab-text strong{color:var(--tx);font-weight:500;}
+.ab-highlight{border-left:2px solid var(--gold);padding:20px 28px;margin:40px 0;background:rgba(191,155,78,.03);}
+.ab-highlight p{font-family:var(--fh);font-size:1.1rem;color:var(--tx);line-height:1.7;font-style:italic;}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:40px;margin:48px 0;}
+.tl::before{content:'';position:absolute;left:14px;top:0;bottom:0;width:1px;background:var(--brs);}
+.tl-item{position:relative;margin-bottom:40px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-33px;top:4px;width:12px;height:12px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px rgba(191,155,78,.3);}
+.tl-year{font-family:var(--fm);font-size:.7rem;color:var(--gold);letter-spacing:.1em;margin-bottom:6px;}
+.tl-title{font-family:var(--fh);font-size:1.1rem;margin-bottom:6px;font-weight:400;}
+.tl-desc{font-size:.78rem;color:var(--txm);line-height:1.7;font-weight:300;}
+
+/* VALUES */
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:48px 0;}
+.val{padding:28px;border:1px solid var(--brs);text-align:center;transition:border-color .3s;}
+.val:hover{border-color:var(--br);}
+.val-icon{margin-bottom:14px;}.val-icon svg{width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.val-title{font-family:var(--fh);font-size:.95rem;margin-bottom:8px;color:var(--tx);}
+.val-desc{font-size:.72rem;color:var(--txm);line-height:1.6;}
+@media(max-width:600px){.vals{grid-template-columns:1fr;}}
+
+/* CTA */
+.ab-cta{text-align:center;padding:60px 20px 80px;margin:0 auto;max-width:600px;}
+.ab-cta .st{margin-bottom:20px;}
+.ab-cta .ss{margin:0 auto 32px;text-align:center;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--brs);padding:40px 20px;text-align:center;}
+footer img{height:28px;margin:0 auto 16px;opacity:.7;}
+.fc{font-size:.58rem;color:var(--txs);margin-bottom:6px;}
+.fs{display:flex;gap:16px;justify-content:center;margin-top:12px;}.fs a{font-size:.58rem;color:var(--txm);transition:color .2s;}.fs a:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<div id="pt-overlay">
+  <div class="pt-top"></div>
+  <div class="pt-bot"></div>
+  <div class="pt-logo">
+    <img src="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_486,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png" alt="Fresh Fades">
+  </div>
+</div>
+
+<nav id="nv">
+  <a href="/" class="nl"><img src="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_486,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png" alt="Fresh Fades"></a>
+  <div class="nk"><a href="/">Home</a><a href="diensten.html">Services</a><a href="/#team">Barbers</a><a href="/#locations">Locations</a><a href="producten.html">Shop</a><a href="about.html" class="act">About</a><a href="/#contact">Contact</a><a href="booking.html" class="nc">Book Now</a></div>
+  <button class="mb" onclick="document.getElementById('mm').classList.add('open')">&#9776;</button>
+</nav>
+<div class="mm" id="mm"><button class="mc" onclick="this.parentElement.classList.remove('open')">&times;</button><a href="/">Home</a><a href="diensten.html">Services</a><a href="/#team">Barbers</a><a href="producten.html">Shop</a><a href="about.html">About</a><a href="booking.html" style="color:var(--gold);">Book Now</a></div>
+
+<!-- HERO -->
+<div class="ab-hero">
+  <div class="ab-hero-bg"></div>
+  <div class="ab-hero-content">
+    <div class="se">Our Story</div>
+    <div class="st">More than a <em>barbershop</em></div>
+    <div class="ss" style="margin:0 auto;text-align:center;">How a passion for precision fades became Malta's most-loved barbershop.</div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="rv">
+  <div class="se">The Beginning</div>
+  <div class="st">From one chair to <em>two shops</em></div>
+
+  <p class="ab-text">Fresh Fades started in <strong>2019</strong> with a simple belief: every person deserves to walk out of a barbershop feeling like the best version of themselves. What began as a single chair in Swieqi quickly grew into something bigger — a community of barbers and clients who share a passion for quality.</p>
+
+  <p class="ab-text">Founded by a team of dedicated barbers, Fresh Fades was built on the idea that a haircut isn't just a service — it's an <strong>experience</strong>. From the moment you walk in, you're greeted with good music, great conversation, and the confidence that you're in expert hands.</p>
+
+  <div class="ab-highlight">
+    <p>"We don't just cut hair. We build confidence. Every fade, every line, every detail — it's personal."</p>
+  </div>
+
+  <p class="ab-text">In <strong>2024</strong>, Fresh Fades was awarded <strong>Best Barber Salon in Malta</strong> — a recognition of the team's relentless pursuit of perfection. That same year, the second location opened in <strong>Sliema</strong>, bringing the Fresh Fades experience to even more clients across the island.</p>
+
+  <p class="ab-text">Today, with <strong>10+ skilled barbers</strong> across two locations, Fresh Fades continues to raise the bar. Every barber on the team is handpicked for their skill, creativity, and dedication to the craft. From classic cuts to bold designs, skin fades to beard sculpting — the team does it all, and does it exceptionally.</p>
+</section>
+
+<!-- TIMELINE -->
+<section class="rv">
+  <div class="se">Milestones</div>
+  <div class="st">Our <em>journey</em></div>
+
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2019</div>
+      <div class="tl-title">Fresh Fades opens in Swieqi</div>
+      <div class="tl-desc">The first shop opens at 132 Triq is-Swieqi. A small team, big ambitions, and a vision to become Malta's best.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2021</div>
+      <div class="tl-title">Team grows to 4+ barbers</div>
+      <div class="tl-desc">Word spreads fast. The team expands with talented barbers from across the island and beyond.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2023</div>
+      <div class="tl-title">5,000+ haircuts completed</div>
+      <div class="tl-desc">Thousands of clients trust Fresh Fades for their regular cuts. Online booking launches for 24/7 convenience.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2024</div>
+      <div class="tl-title">Best Barber Salon — Malta</div>
+      <div class="tl-desc">Fresh Fades wins the award for Best Barber Salon, cementing their reputation as the island's top choice.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2024</div>
+      <div class="tl-title">Sliema location opens</div>
+      <div class="tl-desc">The second shop opens at 6a Triq Manwel Dimech, Sliema. Double the chairs, double the fades.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2026</div>
+      <div class="tl-title">10+ barbers, 2 locations, 1 mission</div>
+      <div class="tl-desc">The team keeps growing. The mission stays the same: every client leaves sharper than they came in.</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="rv">
+  <div class="se">What We Stand For</div>
+  <div class="st">Our <em>values</em></div>
+
+  <div class="vals">
+    <div class="val">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+      <div class="val-title">Precision</div>
+      <div class="val-desc">Every line, every fade, every detail is executed with surgical precision. No shortcuts, no compromises.</div>
+    </div>
+    <div class="val">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <div class="val-title">Community</div>
+      <div class="val-desc">We're not just a barbershop — we're a place where people connect, share stories, and feel at home.</div>
+    </div>
+    <div class="val">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+      <div class="val-title">Excellence</div>
+      <div class="val-desc">Award-winning quality isn't luck. It's the result of daily practice, continuous learning, and genuine care.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="ab-cta rv">
+  <div class="se">Ready?</div>
+  <div class="st">Experience the <em>difference</em></div>
+  <div class="ss">Book your appointment today and see why thousands of clients trust Fresh Fades.</div>
+  <a href="booking.html" class="btn btn-g">Book Now &rarr;</a>
+</div>
+
+<footer>
+  <a href="/"><img src="https://static.wixstatic.com/media/802aa8_b2d94e2af6464560b541a40f82d70680~mv2.png/v1/fill/w_486,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fresh-fades-logoooo.png" alt="Fresh Fades"></a>
+  <div class="fc">&copy; 2026 Fresh Fades Barbershop. All rights reserved.</div>
+  <div class="fc">Website developed by Roel from <a href="https://novastudiowebdesign.com/" target="_blank" style="color:var(--gold);font-weight:600;">NOVA STUDIO</a></div>
+  <div class="fs"><a href="https://www.instagram.com/fresh_fades_malta" target="_blank">Instagram</a><a href="https://www.facebook.com/share/16g4gnpU9b/" target="_blank">Facebook</a><a href="https://www.tiktok.com/@fresh_fades_malta" target="_blank">TikTok</a></div>
+</footer>
+
+<script>
+window.addEventListener('scroll',function(){var n=document.getElementById('nv');n.classList.toggle('scrolled',window.scrollY>60);});
+var rvObs=new IntersectionObserver(function(e){e.forEach(function(el){if(el.isIntersecting)el.target.classList.add('vis');});},{threshold:0.1});
+document.querySelectorAll('.rv').forEach(function(el){rvObs.observe(el);});
+
+(function(){
+  var ov=document.getElementById('pt-overlay');
+  if(!ov)return;
+  function navigateTo(url){ov.classList.remove('pt-out','pt-anim');void ov.offsetWidth;setTimeout(function(){ov.classList.add('pt-anim');},50);setTimeout(function(){window.location.href=url;},800);}
+  var _done=false;
+  function pageIn(){if(_done)return;_done=true;if(!window.location.hash)window.scrollTo(0,0);ov.classList.remove('pt-out');ov.classList.add('pt-anim');setTimeout(function(){ov.classList.add('pt-out');},600);}
+  document.querySelectorAll('a[href]:not([href^="http"]):not([href^="#"]):not([href^="mailto"]):not([href^="tel"]):not([href^="https://wa"])').forEach(function(a){
+    a.addEventListener('click',function(e){var href=a.getAttribute('href');if(!href||href==='#')return;var cur=location.pathname.split('/').pop()||'index.html';var base=href.split('#')[0].split('?')[0];if(base===cur||base===''){e.preventDefault();ov.classList.remove('pt-out','pt-anim');void ov.offsetWidth;setTimeout(function(){ov.classList.add('pt-anim');},50);setTimeout(function(){window.scrollTo(0,0);setTimeout(function(){ov.classList.add('pt-out');},400);},600);return;}e.preventDefault();navigateTo(href);});
+  });
+  window.addEventListener('pageshow',function(){_done=false;pageIn();});
+  if(document.readyState==='complete')pageIn();else window.addEventListener('load',pageIn);
+  setTimeout(function(){ov.classList.add('pt-anim');setTimeout(function(){ov.classList.add('pt-out');},500);},1500);
+})();
+</script>
+
+
+</body>
+</html>
